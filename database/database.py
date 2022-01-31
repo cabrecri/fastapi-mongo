@@ -1,10 +1,11 @@
 import motor.motor_asyncio
+import os
 from bson import ObjectId
 from decouple import config
 
 from .database_helper import student_helper, admin_helper
-
-MONGO_DETAILS = config('MONGO_DETAILS')
+MONGO_DETAILS = os.environ['MONGO_DETAILS']
+#MONGO_DETAILS = config('MONGO_DETAILS')
 
 client = motor.motor_asyncio.AsyncIOMotorClient(MONGO_DETAILS)
 
