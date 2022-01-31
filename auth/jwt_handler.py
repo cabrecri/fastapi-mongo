@@ -10,7 +10,7 @@ def token_response(token: str):
         "access_token": token
     }
 
-JWT_SECRET = config('secret')
+JWT_SECRET = 'mysuper secreto12345' # config('secret')
 
 
 def signJWT(user_id: str) -> Dict[str, str]:
